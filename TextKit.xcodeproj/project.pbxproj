@@ -8,20 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		B6CCC7232206802200961CE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CCC7222206802200961CE0 /* AppDelegate.swift */; };
-		B6CCC7252206802200961CE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CCC7242206802200961CE0 /* ViewController.swift */; };
 		B6CCC7282206802200961CE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6CCC7262206802200961CE0 /* Main.storyboard */; };
 		B6CCC72A2206802400961CE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6CCC7292206802400961CE0 /* Assets.xcassets */; };
 		B6CCC72D2206802400961CE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6CCC72B2206802400961CE0 /* LaunchScreen.storyboard */; };
+		B6CCC735220695D500961CE0 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CCC734220695D500961CE0 /* ConfigurationViewController.swift */; };
+		B6CCC7392206B65900961CE0 /* HighlightingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CCC7382206B65900961CE0 /* HighlightingViewController.swift */; };
+		B6CCC73B2206B75B00961CE0 /* HighlightingTextStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CCC73A2206B75B00961CE0 /* HighlightingTextStorage.swift */; };
+		B6CCC73F2206DB4600961CE0 /* LayoutingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CCC73E2206DB4600961CE0 /* LayoutingViewController.swift */; };
+		B6CCC7412206DC3F00961CE0 /* LinkDetectingTextStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CCC7402206DC3F00961CE0 /* LinkDetectingTextStorage.swift */; };
+		B6CCC744220FDEC600961CE0 /* poem.txt in Resources */ = {isa = PBXBuildFile; fileRef = B6CCC743220FDEC600961CE0 /* poem.txt */; };
+		B6CCC746220FE19700961CE0 /* iText.txt in Resources */ = {isa = PBXBuildFile; fileRef = B6CCC745220FE19700961CE0 /* iText.txt */; };
+		B6CCC748220FE24300961CE0 /* layout.txt in Resources */ = {isa = PBXBuildFile; fileRef = B6CCC747220FE24300961CE0 /* layout.txt */; };
+		B6CCC74A2210500500961CE0 /* OutliningLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CCC7492210500500961CE0 /* OutliningLayoutManager.swift */; };
+		B6CCC74D2210681600961CE0 /* InteractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CCC74C2210681600961CE0 /* InteractionViewController.swift */; };
+		B6CCC74F22106AAF00961CE0 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CCC74E22106AAF00961CE0 /* CircleView.swift */; };
+		B6CCC75122106D0200961CE0 /* lorem.txt in Resources */ = {isa = PBXBuildFile; fileRef = B6CCC75022106D0200961CE0 /* lorem.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B6CCC71F2206802200961CE0 /* TextKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CCC7222206802200961CE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B6CCC7242206802200961CE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B6CCC7272206802200961CE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6CCC7292206802400961CE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6CCC72C2206802400961CE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6CCC72E2206802400961CE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6CCC734220695D500961CE0 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
+		B6CCC7382206B65900961CE0 /* HighlightingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightingViewController.swift; sourceTree = "<group>"; };
+		B6CCC73A2206B75B00961CE0 /* HighlightingTextStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightingTextStorage.swift; sourceTree = "<group>"; };
+		B6CCC73E2206DB4600961CE0 /* LayoutingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutingViewController.swift; sourceTree = "<group>"; };
+		B6CCC7402206DC3F00961CE0 /* LinkDetectingTextStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkDetectingTextStorage.swift; sourceTree = "<group>"; };
+		B6CCC743220FDEC600961CE0 /* poem.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = poem.txt; sourceTree = "<group>"; };
+		B6CCC745220FE19700961CE0 /* iText.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = iText.txt; sourceTree = "<group>"; };
+		B6CCC747220FE24300961CE0 /* layout.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = layout.txt; sourceTree = "<group>"; };
+		B6CCC7492210500500961CE0 /* OutliningLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutliningLayoutManager.swift; sourceTree = "<group>"; };
+		B6CCC74C2210681600961CE0 /* InteractionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionViewController.swift; sourceTree = "<group>"; };
+		B6CCC74E22106AAF00961CE0 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		B6CCC75022106D0200961CE0 /* lorem.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = lorem.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +77,64 @@
 			isa = PBXGroup;
 			children = (
 				B6CCC7222206802200961CE0 /* AppDelegate.swift */,
-				B6CCC7242206802200961CE0 /* ViewController.swift */,
+				B6CCC7362206B62200961CE0 /* Configuration */,
+				B6CCC7372206B63200961CE0 /* Highlighting */,
+				B6CCC73D2206DB2400961CE0 /* Layout */,
+				B6CCC74B221067F800961CE0 /* Interaction */,
+				B6CCC742220FDE7900961CE0 /* Texts */,
 				B6CCC7262206802200961CE0 /* Main.storyboard */,
 				B6CCC7292206802400961CE0 /* Assets.xcassets */,
 				B6CCC72B2206802400961CE0 /* LaunchScreen.storyboard */,
 				B6CCC72E2206802400961CE0 /* Info.plist */,
 			);
 			path = TextKit;
+			sourceTree = "<group>";
+		};
+		B6CCC7362206B62200961CE0 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				B6CCC734220695D500961CE0 /* ConfigurationViewController.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		B6CCC7372206B63200961CE0 /* Highlighting */ = {
+			isa = PBXGroup;
+			children = (
+				B6CCC7382206B65900961CE0 /* HighlightingViewController.swift */,
+				B6CCC73A2206B75B00961CE0 /* HighlightingTextStorage.swift */,
+			);
+			path = Highlighting;
+			sourceTree = "<group>";
+		};
+		B6CCC73D2206DB2400961CE0 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				B6CCC73E2206DB4600961CE0 /* LayoutingViewController.swift */,
+				B6CCC7492210500500961CE0 /* OutliningLayoutManager.swift */,
+				B6CCC7402206DC3F00961CE0 /* LinkDetectingTextStorage.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		B6CCC742220FDE7900961CE0 /* Texts */ = {
+			isa = PBXGroup;
+			children = (
+				B6CCC743220FDEC600961CE0 /* poem.txt */,
+				B6CCC745220FE19700961CE0 /* iText.txt */,
+				B6CCC747220FE24300961CE0 /* layout.txt */,
+				B6CCC75022106D0200961CE0 /* lorem.txt */,
+			);
+			path = Texts;
+			sourceTree = "<group>";
+		};
+		B6CCC74B221067F800961CE0 /* Interaction */ = {
+			isa = PBXGroup;
+			children = (
+				B6CCC74C2210681600961CE0 /* InteractionViewController.swift */,
+				B6CCC74E22106AAF00961CE0 /* CircleView.swift */,
+			);
+			path = Interaction;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,8 +196,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6CCC72D2206802400961CE0 /* LaunchScreen.storyboard in Resources */,
+				B6CCC75122106D0200961CE0 /* lorem.txt in Resources */,
+				B6CCC746220FE19700961CE0 /* iText.txt in Resources */,
 				B6CCC72A2206802400961CE0 /* Assets.xcassets in Resources */,
 				B6CCC7282206802200961CE0 /* Main.storyboard in Resources */,
+				B6CCC748220FE24300961CE0 /* layout.txt in Resources */,
+				B6CCC744220FDEC600961CE0 /* poem.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +212,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6CCC7252206802200961CE0 /* ViewController.swift in Sources */,
+				B6CCC74F22106AAF00961CE0 /* CircleView.swift in Sources */,
+				B6CCC73B2206B75B00961CE0 /* HighlightingTextStorage.swift in Sources */,
+				B6CCC74D2210681600961CE0 /* InteractionViewController.swift in Sources */,
+				B6CCC73F2206DB4600961CE0 /* LayoutingViewController.swift in Sources */,
+				B6CCC7392206B65900961CE0 /* HighlightingViewController.swift in Sources */,
 				B6CCC7232206802200961CE0 /* AppDelegate.swift in Sources */,
+				B6CCC7412206DC3F00961CE0 /* LinkDetectingTextStorage.swift in Sources */,
+				B6CCC735220695D500961CE0 /* ConfigurationViewController.swift in Sources */,
+				B6CCC74A2210500500961CE0 /* OutliningLayoutManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
