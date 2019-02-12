@@ -1,2 +1,1 @@
-# [TextKit](https://github.com/leiguang/TextKit)
-TextKitDemo学习自[初识TextKit](https://objccn.io/issue-5-1/) [GitHub](https://github.com/objcio/issue-5-textkit)(Objective-C)
+使用 NSMutableAttributedString.attribute(at.. index)...) 来查找

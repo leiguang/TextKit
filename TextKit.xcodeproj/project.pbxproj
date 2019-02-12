@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B628A7DA221141A0000AE6BB /* BindingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628A7D9221141A0000AE6BB /* BindingViewController.swift */; };
+		B628A7DC2211431D000AE6BB /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628A7DB2211431D000AE6BB /* Friend.swift */; };
+		B628A7DE22114D8B000AE6BB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628A7DD22114D8B000AE6BB /* TabBarViewController.swift */; };
+		B628A7E0221150AA000AE6BB /* BindingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628A7DF221150AA000AE6BB /* BindingTextView.swift */; };
+		B628A7E2221158F9000AE6BB /* BindingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628A7E1221158F9000AE6BB /* BindingProtocol.swift */; };
+		B628A7E42211A5D9000AE6BB /* BindingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628A7E32211A5D9000AE6BB /* BindingBox.swift */; };
+		B628A7F22212C543000AE6BB /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B628A7F12212C543000AE6BB /* Topic.swift */; };
 		B6CCC7232206802200961CE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CCC7222206802200961CE0 /* AppDelegate.swift */; };
 		B6CCC7282206802200961CE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6CCC7262206802200961CE0 /* Main.storyboard */; };
 		B6CCC72A2206802400961CE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6CCC7292206802400961CE0 /* Assets.xcassets */; };
@@ -26,6 +33,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B628A7D9221141A0000AE6BB /* BindingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingViewController.swift; sourceTree = "<group>"; };
+		B628A7DB2211431D000AE6BB /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		B628A7DD22114D8B000AE6BB /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		B628A7DF221150AA000AE6BB /* BindingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingTextView.swift; sourceTree = "<group>"; };
+		B628A7E1221158F9000AE6BB /* BindingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingProtocol.swift; sourceTree = "<group>"; };
+		B628A7E32211A5D9000AE6BB /* BindingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBox.swift; sourceTree = "<group>"; };
+		B628A7F12212C543000AE6BB /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		B6CCC71F2206802200961CE0 /* TextKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CCC7222206802200961CE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6CCC7272206802200961CE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,6 +71,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B628A7D822114177000AE6BB /* Binding */ = {
+			isa = PBXGroup;
+			children = (
+				B628A7D9221141A0000AE6BB /* BindingViewController.swift */,
+				B628A7DF221150AA000AE6BB /* BindingTextView.swift */,
+				B628A7E1221158F9000AE6BB /* BindingProtocol.swift */,
+				B628A7E32211A5D9000AE6BB /* BindingBox.swift */,
+				B628A7DB2211431D000AE6BB /* Friend.swift */,
+				B628A7F12212C543000AE6BB /* Topic.swift */,
+			);
+			path = Binding;
+			sourceTree = "<group>";
+		};
 		B6CCC7162206802200961CE0 = {
 			isa = PBXGroup;
 			children = (
@@ -77,12 +104,14 @@
 			isa = PBXGroup;
 			children = (
 				B6CCC7222206802200961CE0 /* AppDelegate.swift */,
+				B628A7DD22114D8B000AE6BB /* TabBarViewController.swift */,
+				B6CCC7262206802200961CE0 /* Main.storyboard */,
 				B6CCC7362206B62200961CE0 /* Configuration */,
 				B6CCC7372206B63200961CE0 /* Highlighting */,
 				B6CCC73D2206DB2400961CE0 /* Layout */,
 				B6CCC74B221067F800961CE0 /* Interaction */,
+				B628A7D822114177000AE6BB /* Binding */,
 				B6CCC742220FDE7900961CE0 /* Texts */,
-				B6CCC7262206802200961CE0 /* Main.storyboard */,
 				B6CCC7292206802400961CE0 /* Assets.xcassets */,
 				B6CCC72B2206802400961CE0 /* LaunchScreen.storyboard */,
 				B6CCC72E2206802400961CE0 /* Info.plist */,
@@ -213,14 +242,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6CCC74F22106AAF00961CE0 /* CircleView.swift in Sources */,
+				B628A7E0221150AA000AE6BB /* BindingTextView.swift in Sources */,
+				B628A7E2221158F9000AE6BB /* BindingProtocol.swift in Sources */,
 				B6CCC73B2206B75B00961CE0 /* HighlightingTextStorage.swift in Sources */,
 				B6CCC74D2210681600961CE0 /* InteractionViewController.swift in Sources */,
+				B628A7F22212C543000AE6BB /* Topic.swift in Sources */,
 				B6CCC73F2206DB4600961CE0 /* LayoutingViewController.swift in Sources */,
+				B628A7DE22114D8B000AE6BB /* TabBarViewController.swift in Sources */,
+				B628A7DA221141A0000AE6BB /* BindingViewController.swift in Sources */,
 				B6CCC7392206B65900961CE0 /* HighlightingViewController.swift in Sources */,
+				B628A7E42211A5D9000AE6BB /* BindingBox.swift in Sources */,
 				B6CCC7232206802200961CE0 /* AppDelegate.swift in Sources */,
 				B6CCC7412206DC3F00961CE0 /* LinkDetectingTextStorage.swift in Sources */,
 				B6CCC735220695D500961CE0 /* ConfigurationViewController.swift in Sources */,
 				B6CCC74A2210500500961CE0 /* OutliningLayoutManager.swift in Sources */,
+				B628A7DC2211431D000AE6BB /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
