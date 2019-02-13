@@ -274,18 +274,23 @@
                         <viewLayoutGuide key="safeArea" id="TXE-T3-ZgF"/>
                     </view>
                     <navigationItem key="navigationItem" id="5xv-Go-Um7">
-                        <rightBarButtonItems>
-                            <barButtonItem title="Add topic" id="9Pd-vd-DoY">
-                                <connections>
-                                    <action selector="addTopic:" destination="8Vw-7p-Ycn" id="754-Gt-fg6"/>
-                                </connections>
-                            </barButtonItem>
+                        <leftBarButtonItems>
                             <barButtonItem title="Add friend" id="NG6-PE-yWW">
                                 <connections>
                                     <action selector="addFriend:" destination="8Vw-7p-Ycn" id="E9B-rG-yHr"/>
                                 </connections>
                             </barButtonItem>
-                        </rightBarButtonItems>
+                            <barButtonItem title="Add topic" id="9Pd-vd-DoY">
+                                <connections>
+                                    <action selector="addTopic:" destination="8Vw-7p-Ycn" id="754-Gt-fg6"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="O7Z-IF-Z7H">
+                            <connections>
+                                <action selector="endEditing:" destination="8Vw-7p-Ycn" id="DkK-NM-Bik"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="textView" destination="6Zs-Rl-2Oe" id="3Rj-1h-mXb"/>

@@ -18,7 +18,7 @@ class BindingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textView.bindingDelegate = self
+        textView.bindingManager.delegate = self
         
         inspectCharacterLength()
     }
@@ -41,13 +41,16 @@ class BindingViewController: UIViewController {
     @IBAction func addFriend(_ sender: Any) {
         let friend = BindingViewController.getARandomFriend()
         friends.append(friend)
-        textView.addBindingObject(friend)
+        textView.bindingManager.addBindingObject(friend)
     }
     
     @IBAction func addTopic(_ sender: Any) {
         let topic = BindingViewController.getARandomTopic()
         topics.append(topic)
-        textView.addBindingObject(topic)
+        textView.bindingManager.addBindingObject(topic)
+    }
+    @IBAction func endEditing(_ sender: Any) {
+        view.endEditing(true)
     }
     
     class func getARandomFriend() -> Friend {
@@ -63,7 +66,7 @@ class BindingViewController: UIViewController {
     }
 }
 
-extension BindingViewController: BindingTextViewDelegate {
+extension BindingViewController: BindingManagerDelegate {
     var typingAttributes: [NSAttributedString.Key: Any] {
         return [
             .foregroundColor: UIColor.black
