@@ -10,7 +10,8 @@ import UIKit
 
 /*
  - Note:
- The text may contain multi-byte encoded character. eg: "emoji 😃, its text.count = 1, but attributeText.length = 2". So remember using attributedText.length to calculate range and length in BindingManager.
+ The text may contain multi-byte encoded character. eg: "emoji 😃, its text.count = 1, but attributeText.length = 2".
+ So remember using attributedText.length to calculate range and length in BindingManager.
  */
 
 protocol BindingManagerDelegate: class {
@@ -29,7 +30,7 @@ class BindingManager: NSObject {
     
     private var bindingBoxs: [BindingBox<BindingProtocol>] = [] {
         didSet {
-            print("bindingObjects:", bindingBoxs.map { $0.value.bindingText + ":" + ($0.uuid.uuidString as NSString).substring(to: 6) })
+            print("bindingObjects:", bindingBoxs.map { $0.value.bindingText + ":" + String($0.uuid.uuidString.prefix(6)) })
         }
     }
     
@@ -87,12 +88,9 @@ extension BindingManager: UITextViewDelegate {
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if let attrs = delegate?.typingAttributes {
-            textView.typingAttributes = attrs
-        }
-        
         // Non-multiple selection && deleteBackward action.
-        // - Note: The deleted character maybe a multi-byte encoded character. eg: "emoji 😃, its text.count = 1, but attributeText.length = 2". Here it is judged whether the deleted range represents a single character, so it should not judged simply by "range.length == 1".
+        // - Note: The deleted character maybe a multi-byte encoded character. eg: "emoji 😃, its text.count = 1, but attributeText.length = 2".
+        //      Here it is judged whether the deleted range represents a single character, so it should not judged simply by "range.length == 1".
         let characterCountInReplacementRange = (textView.attributedText.string as NSString).substring(with: range).count
         if text == "" && characterCountInReplacementRange == 1 {
             var effectiveRange = NSRange(location: 0, length: 0)
@@ -139,5 +137,14 @@ extension BindingManager: UITextViewDelegate {
         if textView.selectedRange != newSelectedRange {
             textView.selectedRange = newSelectedRange
         }
+    }
+    
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        // For copying and pasting text into text view, you should ensure that the attributess of text are consistent, otherwise if the cursor is at "@xx" is different from the general text attribtues, the content's attributes pasted here will be same as "@xx".
+        // To prevent this, we can reset it in the "textViewShouldBeginEditing(_:)" method.
+        if let attrs = delegate?.typingAttributes {
+            textView.typingAttributes = attrs
+        }
+        return true
     }
 }
