@@ -21,6 +21,7 @@ class BindingViewController: UIViewController {
         textView.bindingManager.delegate = self
         
         inspectCharacterLength()
+//        addDefaultText()
     }
     
     func inspectCharacterLength() {
@@ -36,6 +37,34 @@ class BindingViewController: UIViewController {
         print("attributedText.length:", attributedText.length)
         print("text.rangeOf'我':", (text as NSString).range(of: "我"))
         print("text.rangeOf'⭐️':", (text as NSString).range(of: "⭐️"))
+    }
+    
+    func addDefaultText() {
+        let friendList = [Friend(id: "1", name: "朋友1"), Friend(id: "2", name: "朋友2")]
+        let topicList = [Topic(id: "1", title: "话题1"), Topic(id: "2", title: "话题2")]
+        let text = "#话题1##话题1##话题2#n #话题2##话题2c#ad//@朋友1@1112 @朋友231@朋友3@ef*&^HN"
+        let mutableAttributedText = NSMutableAttributedString(string: text, attributes: typingAttributes)
+        textView.attributedText = mutableAttributedText
+        let list = friendList.map { $0.bindingText } + topicList.map { $0.bindingText }
+        let pattern = list.joined(separator: "|")
+        do {
+            let regex = try NSRegularExpression(pattern: pattern, options: [])
+            regex.enumerateMatches(in: text, options: [], range: NSRange(location: 0, length: text.count)) { (checkingResult, _, _) in
+                guard let checkingResult = checkingResult else {
+                    return
+                }
+                let matchedRange = checkingResult.range
+                let matchedText = (text as NSString).substring(with: matchedRange)
+                print("range:", matchedRange, matchedText)
+                if let friend = friendList.first(where: { matchedText == $0.bindingText }) {
+                    self.textView.bindingManager.addBindingObject(friend, in: matchedRange)
+                } else if let topic = topicList.first(where: { matchedText == $0.bindingText }) {
+                    self.textView.bindingManager.addBindingObject(topic, in: matchedRange)
+                }
+            }
+        } catch {
+            print(error)
+        }
     }
     
     @IBAction func addFriend(_ sender: Any) {

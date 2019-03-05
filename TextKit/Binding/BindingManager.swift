@@ -42,6 +42,20 @@ class BindingManager: NSObject {
         self.textView = textView
     }
     
+    func addBindingObject<T: BindingProtocol>(_ object: T, in range: NSRange) {
+        guard let attributedText = textView.attributedText, range.location != NSNotFound, range.location + range.length <= attributedText.length else {
+            return
+        }
+        removeBindingObjects(in: range)
+        
+        let box = BindingBox<BindingProtocol>(object)
+        bindingBoxs.append(box)
+        let mutableAttributedText = NSMutableAttributedString(attributedString: attributedText)
+        mutableAttributedText.addAttributes(object.textAttributes, range: range)
+        mutableAttributedText.addAttribute(bindingKey, value: box, range: range)
+        textView.attributedText = mutableAttributedText
+    }
+    
     func addBindingObject<T: BindingProtocol>(_ object: T) {
         removeBindingObjects(in: textView.selectedRange)
         
@@ -58,6 +72,9 @@ class BindingManager: NSObject {
     }
     
     func removeBindingObjects(in range: NSRange) {
+        guard range.location != NSNotFound, range.location + range.length <= textView.attributedText.length else {
+            return
+        }
         textView.attributedText.enumerateAttributes(in: range, options: []) { (attrs, _, _) in
             if let bindingBox = attrs[bindingKey] as? BindingBox<BindingProtocol>,
                 let index = bindingBoxs.firstIndex(where: { $0.uuid == bindingBox.uuid }) {
@@ -88,6 +105,10 @@ extension BindingManager: UITextViewDelegate {
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if let attrs = delegate?.typingAttributes {
+            textView.typingAttributes = attrs
+        }
+        
         // Non-multiple selection && deleteBackward action.
         // - Note: The deleted character maybe a multi-byte encoded character. eg: "emoji 😃, its text.count = 1, but attributeText.length = 2".
         //      Here it is judged whether the deleted range represents a single character, so it should not judged simply by "range.length == 1".

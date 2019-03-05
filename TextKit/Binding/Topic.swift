@@ -15,7 +15,7 @@ struct Topic {
 
 extension Topic: BindingProtocol {
     var bindingText: String {
-        return "#\(title)"
+        return "#\(title)#"
     }
     
     var textAttributes: [NSAttributedString.Key: Any] {
